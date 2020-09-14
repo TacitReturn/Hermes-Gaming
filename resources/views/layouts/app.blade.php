@@ -13,7 +13,7 @@
     <nav class="container mx-auto flex items-center justify-between px-4 py-6">
         <div class="flex items-center">
             <a href="/">
-                <img src="" alt="hermes" class="w-32 flex-none">
+                <img src="img/logo.png" alt="hermes" class="w-32 flex-none">
             </a>
             <ul class="flex">
                 <li><a href="" class="hover:text-gray-400">Games</a></li>
