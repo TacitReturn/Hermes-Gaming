@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Hermes Game Aggragator</title>
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-black text-white">
 <header class="border-b border-gray-800">
     <nav class="container mx-auto flex items-center justify-between px-4 py-6">
         <div class="flex items-center">
             <a href="/">
-                <img src="{{ asset('img/logo.png') }}" alt="hermes" class="w-32 flex-none">
+                <img
+                    style="width: 75px;"
+                    src="{{ asset('img/logo.png') }}"
+                    alt="hermes"
+                    class="flex-none">
             </a>
-            <ul class="flex">
-                <li><a href="" class="hover:text-gray-400">Games</a></li>
-                <li><a href="" class="hover:text-gray-400">Reviews</a></li>
-                <li><a href="" class="hover:text-gray-400">Coming Soon</a></li>
+            <ul class="flex ml-16 space-x-6">
+                <li><a href="" class="hover:text-gray-600">Games</a></li>
+                <li><a href="" class="hover:text-gray-600">Reviews</a></li>
+                <li><a href="" class="hover:text-gray-600">Coming Soon</a></li>
             </ul>
+        </div>
+
+        <div class="flex">
+
         </div>
     </nav>
 </header>
