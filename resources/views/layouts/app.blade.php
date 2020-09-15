@@ -10,23 +10,23 @@
 </head>
 <body class="bg-black text-white">
 <header class="border-b border-gray-800">
-    <nav class="container mx-auto flex items-center justify-between px-4 py-6">
-        <div class="flex items-center">
+    <nav class="container mx-auto flex items-center justify-between px-4 py-6 flex-col lg:flex-row">
+        <div class="flex flex-col lg:flex-row items-center">
             <a href="/">
                 <img
                     style="width: 60px;"
                     src="{{ asset('img/logo.png') }}"
                     alt="hermes"
-                    class="flex-none">
+                    class="flex-none pb-5 lg:pb-0">
             </a>
-            <ul class="flex ml-16 space-x-6">
+            <ul class="flex ml-0 lg:ml-16 space-x-6">
                 <li><a href="" class="hover:text-gray-600">Games</a></li>
                 <li><a href="" class="hover:text-gray-600">Reviews</a></li>
                 <li><a href="" class="hover:text-gray-600">Coming Soon</a></li>
             </ul>
         </div>
 
-        <div class="flex items-center">
+        <div class="flex items-center mt-5 lg:mt-0">
             <div class="relative">
                 <input class="pl-8 bg-gray-800 text-sm px-3 py-1 w-64 focus:outline-none focus:shadow-outline" type="text" placeholder="Search...">
                 <div class="absolute top-0 flex items-center h-full ml-2">
