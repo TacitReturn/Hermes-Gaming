@@ -14,13 +14,14 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
-    <title>Hermes Game Aggragator</title>
-    <style>
-        #main {
-            display: none;
-        }
-    </style>
-</head>
+    <livewire:styles>
+        <title>Hermes Game Aggragator</title>
+        <style>
+            #main {
+                display: none;
+            }
+        </style>
+        </head>
 <body class="bg-black text-white">
 <div id="mdb-preloader" class="flex-center mt-5">
     <div id="preloader-markup">
@@ -106,5 +107,7 @@
         });
     });
 </script>
+
+<livewire:scripts>
 </body>
 </html>
