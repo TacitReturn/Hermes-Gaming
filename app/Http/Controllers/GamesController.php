@@ -51,19 +51,19 @@ class GamesController extends Controller
 
 //        dump($recentlyReviewed);
 
-        $mostAnticipated = Http::withHeaders(config('services.igdb'))
-            ->withOptions([
-                'body' => "
-                          fields name, cover.url, first_release_date, popularity, platforms.abbreviation, rating, rating_count, summary;
-                          where platforms = (48,49,130,6)
-                          & ( first_release_date >= {$current}
-                          & first_release_date < {$afterFourMonths});
-                          & rating_count > 5);
-                           sort popularity desc;
-                           limit 4;
-                          "
-            ])->get('https://api-v3.igdb.com/games/')
-            ->json();
+//        $mostAnticipated = Http::withHeaders(config('services.igdb'))
+//            ->withOptions([
+//                'body' => "
+//                          fields name, cover.url, first_release_date, popularity, platforms.abbreviation, rating, rating_count, summary;
+//                          where platforms = (48,49,130,6)
+//                          & ( first_release_date >= {$current}
+//                          & first_release_date < {$afterFourMonths});
+//                          & rating_count > 5);
+//                           sort popularity desc;
+//                           limit 4;
+//                          "
+//            ])->get('https://api-v3.igdb.com/games/')
+//            ->json();
 
 //        dump($mostAnticipated);
 
@@ -83,7 +83,6 @@ class GamesController extends Controller
 //        dump($comingSoon);
 
         return view('index', [
-            'mostAnticipated' => $mostAnticipated,
             'comingSoon' => $comingSoon
 
         ]);
