@@ -1,9 +1,9 @@
 <div wire:init="loadPopularGames"
-    class="pupular-games text-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-12 border-b border-gray-800 pb-16 ">
-    @foreach($popularGames as $game)
+     class="pupular-games text-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-12 border-b border-gray-800 pb-16 ">
+    @forelse($popularGames as $game)
         <div class="game mt-8">
             <div class="relative inline-block">
-                <a href="">
+                <a href="{{ route('games.show', $game['slug']) }}">
                     <img src="{{ Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) }}"
                          class="hover:opacity-75 transition ease-in-out duration-150" alt="Game image"/>
                 </a>
@@ -17,7 +17,7 @@
                     </div>
                 @endif
             </div>
-            <a href="" class="block text-base font-semibold leading-tight hover:text-gray-400 mt-8">
+            <a href="{{ route('games.show', $game['slug']) }}" class="block text-base font-semibold leading-tight hover:text-gray-400 mt-8">
                 {{ $game['name'] }}
             </a>
             <div class="text-gray-400 mt-1">
@@ -28,5 +28,13 @@
                 @endforeach
             </div>
         </div>
-    @endforeach
+        @empty
+        <div id="preloader-markup">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    @endforelse
 </div>

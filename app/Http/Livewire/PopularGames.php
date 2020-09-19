@@ -14,13 +14,11 @@ class PopularGames extends Component
     {
         $before = Carbon::now()->subMonths(6)->timestamp;
         $after = Carbon::now()->addMonths(6)->timestamp;
-        $current = Carbon::now()->timestamp;
-        $afterFourMonths = Carbon::now()->addMonths(4)->timestamp;
 
         $this->popularGames = Http::withHeaders(config('services.igdb'))
             ->withOptions([
                 'body' => "
-                          fields name, cover.url, first_release_date, popularity, platforms.abbreviation, rating;
+                          fields name, cover.url, first_release_date, popularity, platforms.abbreviation, rating, slug;
                           where platforms = (48,49,130,6)
                           & ( first_release_date >= {$before}
                            & first_release_date < {$after});

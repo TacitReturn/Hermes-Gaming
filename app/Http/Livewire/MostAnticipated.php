@@ -14,11 +14,11 @@ class MostAnticipated extends Component
     {
         $current = Carbon::now()->timestamp;
         $afterFourMonths = Carbon::now()->addMonths(4)->timestamp;
-        
+
         $this->mostAnticipated = Http::withHeaders(config('services.igdb'))
             ->withOptions([
                 'body' => "
-                          fields name, cover.url, first_release_date, popularity, platforms.abbreviation, rating, rating_count, summary;
+                          fields name, cover.url, first_release_date, popularity, platforms.abbreviation, rating, rating_count, summary, slug, videos.*;
                           where platforms = (48,49,130,6)
                           & ( first_release_date >= {$current}
                           & first_release_date < {$afterFourMonths});

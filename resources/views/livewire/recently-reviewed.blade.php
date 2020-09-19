@@ -1,9 +1,9 @@
 <div wire:init="loadRecentlyReviewed" class="recently-reviewed-container space-y-12 mt-8">
-    @foreach($recentlyReviewed as $game)
+    @forelse($recentlyReviewed as $game)
         <div
             class="game bg-black hover:bg-orange-700 transition duration-1000 rounded-lg shadow-md flex px-6 py-6">
             <div class="relative flex-none">
-                <a href="">
+                <a href="{{ route('games.show', $game['slug']) }}">
                     <img src="{{ Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) }}"
                          class="w-48 hover:opacity-75 transition ease-in-out duration-150"
                          alt="Game image"/>
@@ -35,5 +35,13 @@
                 </p>
             </div>
         </div>
-    @endforeach
+    @empty
+        <div id="preloader-markup">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    @endforelse
 </div>

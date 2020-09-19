@@ -1,7 +1,7 @@
 <div wire:init="loadComingSoon" class="most-anticipated container space-y-10 mt-8">
-    @foreach($comingSoon as $game)
+    @forelse($comingSoon as $game)
         <div class="game flex">
-            <a href="">
+            <a href="{{ route('games.show', $game['slug']) }}">
                 <img
                     src="{{ (Str::replaceFirst('thumb', 'cover_small', $game['cover']['url']))}}"
                     class="hover:opacity-75 transition ease-in-out duration-150"
@@ -14,5 +14,13 @@
                 </p>
             </div>
         </div>
-    @endforeach
+    @empty
+        <div id="preloader-markup">
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        </div>
+    @endforelse
 </div>
