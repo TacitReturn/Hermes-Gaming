@@ -1,4 +1,5 @@
 <?php
+//TODO: Deploy website
 //TODO: Add user authentication to app
 //TODO: Create likes/dislikes system
 //TODO: Create add comment section
