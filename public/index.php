@@ -1,5 +1,7 @@
 <?php
-
+//TODO: Add user authentication to app
+//TODO: Create likes/dislikes system
+//TODO: Create add comment section
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
