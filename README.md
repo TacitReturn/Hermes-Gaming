@@ -3,7 +3,7 @@ A video game aggregator created with Laravel.
 
 </p>
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://chi103.greengeeks.net:2083/cpsess7473901443/viewer/home%2fhephaes1%2fpublic_html%2fprojects%2fscreencaptures/screencapture-hermes-test-2020-09-19-20_07_59.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://rudgesoftware.com/site_images/screencapture-hermes.png" width="400"></a></p>
 
 
 ## About Laravel
