@@ -5,7 +5,7 @@
             <div class="relative inline-block">
                 <a href="{{ route('games.show', $game['slug']) }}">
                     <img src="{{ Str::replaceFirst('thumb', 'cover_big', $game['cover']['url']) }}"
-                         class="hover:opacity-75 transition ease-in-out duration-150" alt="Game image"/>
+                         class="hover:opacity-75 transition ease-in-out duration-150" alt="cover"/>
                 </a>
                 @if(isset($game['rating']))
                     <div
