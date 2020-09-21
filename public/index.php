@@ -1,4 +1,5 @@
 <?php
+//TODO: Fix search functionality - User can click on search image and be linked to show page of game
 //TODO: Deploy website
 //TODO: Add user authentication to app
 //TODO: Create likes/dislikes system
