@@ -308,15 +308,17 @@
                 Images
             </h2>
             <div class="grid grid-cols-3 gap-12 mt-8">
-                @foreach($game['screenshots'] as $screenshot)
-                    <div>
-                        <a href="{{ Str::replaceFirst('thumb', 'screenshot_huge', $screenshot['url']) }}">
-                            <img class="hover:opacity-75 transition ease-in-out duration-1000"
-                                 src="{{ Str::replaceFirst('thumb', 'screenshot_big', $screenshot['url']) }}"
-                                 alt="image">
-                        </a>
-                    </div>
-                @endforeach
+                @if(array_key_exists('screenshots', $game))
+                    @foreach($game['screenshots'] as $screenshot)
+                        <div>
+                            <a href="{{ Str::replaceFirst('thumb', 'screenshot_huge', $screenshot['url']) }}">
+                                <img class="hover:opacity-75 transition ease-in-out duration-1000"
+                                     src="{{ Str::replaceFirst('thumb', 'screenshot_big', $screenshot['url']) }}"
+                                     alt="image">
+                            </a>
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </div>
         <div class="similar-images-container border-gray-800 pb-12 mt-8">
