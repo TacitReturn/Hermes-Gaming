@@ -17,7 +17,7 @@
 {{--    Scripts--}}
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <title>Hermes Game Aggregator</title>
+    <title>{{ config('app.name') }}</title>
 
 </head>
 <body class="bg-black text-white">
