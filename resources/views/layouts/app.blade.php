@@ -44,7 +44,10 @@
         <div class="flex items-center mt-6 lg:mt-0">
             <livewire:search-dropdown />
                 <div class="ml-6">
-                    <a href="#"><img src="{{ asset('img/svg/avatar.svg') }}" alt="avatar" class="rounded-full w-8"></a>
+{{--                    <a href="#"><img src="{{ asset('img/svg/avatar.svg') }}" alt="avatar" class="rounded-full w-8"></a>--}}
+                    <a href="#">
+                        Login
+                    </a>
                 </div>
         </div>
     </nav>
